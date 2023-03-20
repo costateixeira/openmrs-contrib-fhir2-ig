@@ -1,9 +1,9 @@
-id: openmrs
-canonical: http://fhir.openmrs.org/fhir
-version: 0.1.0
+id: openmrs.fhir.core
+canonical: http://fhir.openmrs.org/core
+version: 1.0.0
 name: OMRSFhir2ImplementationGuide
 title: OpenMRS FHIR2 Implementation Guide
-status: draft
+status: active
 publisher: OpenMRS, Inc.
 contact:
   - name: OpenMRS, Inc.
@@ -18,4 +18,4 @@ parameters:
   apply-license: true
   apply-contact: true
 copyrightYear: 2021+
-releaseLabel: ci-build
+releaseLabel: release
