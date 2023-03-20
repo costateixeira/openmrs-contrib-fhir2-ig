@@ -1,0 +1,646 @@
+<html><head><title>Terminology Server Log</title></head><body><h2>Terminology Server Log</h2>
+<hr/><a name="l1"> </a>
+<p>#1</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;location-status-vs&quot;,&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/location-status-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;LocationStatusVS&quot;,&quot;title&quot;:&quot;Location Status ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Indicates whether the location is still in use.&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;https://fhir.openmrs.org/location-status&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;active&quot;,&quot;display&quot;:&quot;Active&quot;},{&quot;code&quot;:&quot;inactive&quot;,&quot;display&quot;:&quot;Inactive&quot;},{&quot;code&quot;:&quot;suspended&quot;,&quot;display&quot;:&quot;Suspended&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3672
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:24:58 GMT
+server:nginx
+x-request-id:5-1775683
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system https://fhir.openmrs.org/location-status&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system https://fhir.openmrs.org/location-status&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l2"> </a>
+<p>#2</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;valueset-immunization-status&quot;,&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/valueset-immunization-status&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;ImmunizationStatusVs&quot;,&quot;title&quot;:&quot;Immunization Status ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Immunization Value Set&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;https://fhir.openmrs.org/fhir/valueset-immunization-status&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;completed&quot;,&quot;display&quot;:&quot;completed&quot;},{&quot;code&quot;:&quot;entered-in-error&quot;,&quot;display&quot;:&quot;entered-in-error&quot;},{&quot;code&quot;:&quot;not-done&quot;,&quot;display&quot;:&quot;not-done&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3708
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:24:59 GMT
+server:nginx
+x-request-id:5-1775686
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system https://fhir.openmrs.org/fhir/valueset-immunization-status&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system https://fhir.openmrs.org/fhir/valueset-immunization-status&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l3"> </a>
+<p>#3</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;medication-request-intent-vs&quot;,&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/medication-request-intent-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;MedicationRequestIntentVs&quot;,&quot;title&quot;:&quot;Medication Request Intent Vs&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Medication Request Intent ValueSet&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;proposal&quot;,&quot;display&quot;:&quot;Proposal&quot;},{&quot;code&quot;:&quot;plan&quot;,&quot;display&quot;:&quot;Plan&quot;},{&quot;code&quot;:&quot;order&quot;,&quot;display&quot;:&quot;Order&quot;},{&quot;code&quot;:&quot;original-order&quot;,&quot;display&quot;:&quot;Original Order&quot;},{&quot;code&quot;:&quot;reflex-order&quot;,&quot;display&quot;:&quot;Reflex Order&quot;},{&quot;code&quot;:&quot;filler-order&quot;,&quot;display&quot;:&quot;Filler Order&quot;},{&quot;code&quot;:&quot;instance-order&quot;,&quot;display&quot;:&quot;Instance Order&quot;},{&quot;code&quot;:&quot;option&quot;,&quot;display&quot;:&quot;Option&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3720
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:00 GMT
+server:nginx
+x-request-id:5-1775690
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l4"> </a>
+<p>#4</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;medication-request-priority-vs&quot;,&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/medication-request-priority-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;MedicationRequestPriorityVs&quot;,&quot;title&quot;:&quot;Medication Request Priority ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Openmrs Medication Request Priority ValueSet&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://fhir.openmrs.org/fhir/request-priority&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;routine&quot;,&quot;display&quot;:&quot;Routine&quot;},{&quot;code&quot;:&quot;urgent&quot;,&quot;display&quot;:&quot;Urgent&quot;},{&quot;code&quot;:&quot;asap&quot;,&quot;display&quot;:&quot;ASAP&quot;},{&quot;code&quot;:&quot;stat&quot;,&quot;display&quot;:&quot;STAT&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3682
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:01 GMT
+server:nginx
+x-request-id:5-1775692
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://fhir.openmrs.org/fhir/request-priority&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://fhir.openmrs.org/fhir/request-priority&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l5"> </a>
+<p>#5</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;OpenMRS-task-status-vs&quot;,&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/OpenMRS-task-status-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;OMRSPatientTaskStatusVS&quot;,&quot;title&quot;:&quot;OpenMRS Status for Task&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;The state of the task, subset from https://www.hl7.org/FHIR/valueset-task-status.html&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/ValueSet/task-status&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;task-status-requested&quot;,&quot;display&quot;:&quot;Requested&quot;},{&quot;code&quot;:&quot;task-status-rejected&quot;,&quot;display&quot;:&quot;Rejected&quot;},{&quot;code&quot;:&quot;task-status-accepted&quot;,&quot;display&quot;:&quot;Accepted&quot;},{&quot;code&quot;:&quot;task-status-completed&quot;,&quot;display&quot;:&quot;Completed&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3672
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:02 GMT
+server:nginx
+x-request-id:5-1775695
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-status&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-status&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l6"> </a>
+<p>#6</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;OpenMRS-task-intent-vs&quot;,&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/OpenMRS-task-intent-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;OMRSPatientTaskIntentVS&quot;,&quot;title&quot;:&quot;OpenMRS Intent for Task&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;The intent of the task, subset from https://www.hl7.org/FHIR/valueset-task-intent.html&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/ValueSet/task-intent&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;task-intent-order&quot;,&quot;display&quot;:&quot;Order&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3672
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:03 GMT
+server:nginx
+x-request-id:5-1775697
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-intent&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-intent&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l7"> </a>
+<p>#7</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;https://openconceptlab.org/orgs/CIEL/sources/CIEL&quot;,&quot;code&quot;:&quot;162298&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:439
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:03 GMT
+last-modified:Mon, 20 Mar 2023 19:25:03 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775698
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'https://openconceptlab.org/orgs/CIEL/sources/CIEL' is not known (encountered paired with code = '162298'); The code provided (https://openconceptlab.org/orgs/CIEL/sources/CIEL#162298) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l8"> </a>
+<p>#8</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;https://cielterminology.org/&quot;,&quot;code&quot;:&quot;116958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:457
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:04 GMT
+last-modified:Mon, 20 Mar 2023 19:25:04 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775700
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'https://cielterminology.org/' is not known (encountered paired with code = '116958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'); The code provided (https://cielterminology.org/#116958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l9"> </a>
+<p>#9</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;http://fhir.openmrs.org/ext/obs/reference-range&quot;,&quot;code&quot;:&quot;absolute&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:439
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:04 GMT
+last-modified:Mon, 20 Mar 2023 19:25:04 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775701
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'http://fhir.openmrs.org/ext/obs/reference-range' is not known (encountered paired with code = 'absolute'); The code provided (http://fhir.openmrs.org/ext/obs/reference-range#absolute) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l10"> </a>
+<p>#10</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;https://hl7.org/fhir/encounter-status&quot;,&quot;code&quot;:&quot;planned&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:417
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:07 GMT
+last-modified:Mon, 20 Mar 2023 19:25:07 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775708
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'https://hl7.org/fhir/encounter-status' is not known (encountered paired with code = 'planned'); The code provided (https://hl7.org/fhir/encounter-status#planned) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l11"> </a>
+<p>#11</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;https://fhir.openmrs.org/location-status&quot;,&quot;code&quot;:&quot;active&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:421
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:07 GMT
+last-modified:Mon, 20 Mar 2023 19:25:07 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775709
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'https://fhir.openmrs.org/location-status' is not known (encountered paired with code = 'active'); The code provided (https://fhir.openmrs.org/location-status#active) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l12"> </a>
+<p>#12</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&quot;,&quot;code&quot;:&quot;proposal&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:473
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:08 GMT
+last-modified:Mon, 20 Mar 2023 19:25:08 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775710
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent' is not known (encountered paired with code = 'proposal'); The code provided (http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent#proposal) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l13"> </a>
+<p>#13</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;http://fhir.openmrs.org/fhir/request-priority&quot;,&quot;code&quot;:&quot;routine&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:433
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:08 GMT
+last-modified:Mon, 20 Mar 2023 19:25:08 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775711
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'http://fhir.openmrs.org/fhir/request-priority' is not known (encountered paired with code = 'routine'); The code provided (http://fhir.openmrs.org/fhir/request-priority#routine) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l14"> </a>
+<p>#14</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;http://hl7.org/fhir/ValueSet/task-intent&quot;,&quot;code&quot;:&quot;task-intent-order&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:443
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:08 GMT
+last-modified:Mon, 20 Mar 2023 19:25:08 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775712
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'http://hl7.org/fhir/ValueSet/task-intent' is not known (encountered paired with code = 'task-intent-order'); The code provided (http://hl7.org/fhir/ValueSet/task-intent#task-intent-order) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l15"> </a>
+<p>#15</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;http://hl7.org/fhir/ValueSet/task-status&quot;,&quot;code&quot;:&quot;task-status-requested&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:451
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:08 GMT
+last-modified:Mon, 20 Mar 2023 19:25:08 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775713
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'http://hl7.org/fhir/ValueSet/task-status' is not known (encountered paired with code = 'task-status-requested'); The code provided (http://hl7.org/fhir/ValueSet/task-status#task-status-requested) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l16"> </a>
+<p>#16</p>
+<pre>
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;https://fhir.openmrs.org/fhir/valueset-immunization-status&quot;,&quot;code&quot;:&quot;completed&quot;}},{&quot;name&quot;:&quot;displayLanguage&quot;,&quot;valueString&quot;:&quot;en-US&quot;},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:463
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:08 GMT
+last-modified:Mon, 20 Mar 2023 19:25:08 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775714
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : false},{&quot;name&quot; : &quot;message&quot;,&quot;valueString&quot; : &quot;The code system 'https://fhir.openmrs.org/fhir/valueset-immunization-status' is not known (encountered paired with code = 'completed'); The code provided (https://fhir.openmrs.org/fhir/valueset-immunization-status#completed) is not valid in the value set 'All codes known to the system'&quot;},{&quot;name&quot; : &quot;cause&quot;,&quot;valueString&quot; : &quot;not-found&quot;}]}
+</pre>
+<hr/><a name="l17"> </a>
+<p>#17</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;coding&quot;,&quot;valueCoding&quot;:{&quot;system&quot;:&quot;http://loinc.org&quot;,&quot;code&quot;:&quot;8480-6&quot;}},{&quot;name&quot;:&quot;default-to-latest-version&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/OpenMRS-order-code-vs--0&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;status&quot;:&quot;active&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://loinc.org&quot;}]}}},{&quot;name&quot;:&quot;cache-id&quot;,&quot;valueString&quot;:&quot;1f037bbe-8ed6-4850-936d-a659fa6e56f3&quot;},{&quot;name&quot;:&quot;profile&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;}]}}]}
+</pre>
+<pre>
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:250
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:13 GMT
+last-modified:Mon, 20 Mar 2023 19:25:13 GMT
+pragma:no-cache
+server:nginx
+x-gdpr-disclosure:All access to this server is logged as AuditEvent Resources, and these store your ip address (and logged in user, if one exists). Also, your IP address is logged with Google Analytics for building geomaps of server usage. Your continued use of the API constitutes agreement to these terms. See [link] for erasure requests
+x-request-id:5-1775719
+
+{&quot;resourceType&quot; : &quot;Parameters&quot;,&quot;parameter&quot; : [{&quot;name&quot; : &quot;display&quot;,&quot;valueString&quot; : &quot;Systolic blood pressure&quot;},{&quot;name&quot; : &quot;system&quot;,&quot;valueString&quot; : &quot;http://loinc.org&quot;},{&quot;name&quot; : &quot;code&quot;,&quot;valueString&quot; : &quot;8480-6&quot;},{&quot;name&quot; : &quot;result&quot;,&quot;valueBoolean&quot; : true}]}
+</pre>
+<hr/><a name="l18"> </a>
+<p>#18</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;incomplete-ok&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;encounter-status-vs&quot;,&quot;text&quot;:{&quot;status&quot;:&quot;generated&quot;,&quot;div&quot;:&quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;https://hl7.org/fhir/encounter-status&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;planned&lt;/td&gt;&lt;td&gt;Planned&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;arrived&lt;/td&gt;&lt;td&gt;Arrived&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;triaged&lt;/td&gt;&lt;td&gt;Triaged&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;in-progress&lt;/td&gt;&lt;td&gt;In Progress&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;onleave&lt;/td&gt;&lt;td&gt;On Leave&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;finished&lt;/td&gt;&lt;td&gt;Finished&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cancelled&lt;/td&gt;&lt;td&gt;Cancelled&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;entered-in-error&lt;/td&gt;&lt;td&gt;Entered in Error&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;unknown&lt;/td&gt;&lt;td&gt;Unknown&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;},&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/encounter-status-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;EncounterVs&quot;,&quot;title&quot;:&quot;EncounterStatus&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Encounter  status ValueSet&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;https://hl7.org/fhir/encounter-status&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;planned&quot;,&quot;display&quot;:&quot;Planned&quot;},{&quot;code&quot;:&quot;arrived&quot;,&quot;display&quot;:&quot;Arrived&quot;},{&quot;code&quot;:&quot;triaged&quot;,&quot;display&quot;:&quot;Triaged&quot;},{&quot;code&quot;:&quot;in-progress&quot;,&quot;display&quot;:&quot;In Progress&quot;},{&quot;code&quot;:&quot;onleave&quot;,&quot;display&quot;:&quot;On Leave&quot;},{&quot;code&quot;:&quot;finished&quot;,&quot;display&quot;:&quot;Finished&quot;},{&quot;code&quot;:&quot;cancelled&quot;,&quot;display&quot;:&quot;Cancelled&quot;},{&quot;code&quot;:&quot;entered-in-error&quot;,&quot;display&quot;:&quot;Entered in Error&quot;},{&quot;code&quot;:&quot;unknown&quot;,&quot;display&quot;:&quot;Unknown&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3666
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:46 GMT
+server:nginx
+x-request-id:5-1775764
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system https://hl7.org/fhir/encounter-status&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system https://hl7.org/fhir/encounter-status&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l19"> </a>
+<p>#19</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;incomplete-ok&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;location-status-vs&quot;,&quot;text&quot;:{&quot;status&quot;:&quot;generated&quot;,&quot;div&quot;:&quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;https://fhir.openmrs.org/location-status&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;active&lt;/td&gt;&lt;td&gt;Active&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;inactive&lt;/td&gt;&lt;td&gt;Inactive&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;suspended&lt;/td&gt;&lt;td&gt;Suspended&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;},&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/location-status-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;LocationStatusVS&quot;,&quot;title&quot;:&quot;Location Status ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Indicates whether the location is still in use.&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;https://fhir.openmrs.org/location-status&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;active&quot;,&quot;display&quot;:&quot;Active&quot;},{&quot;code&quot;:&quot;inactive&quot;,&quot;display&quot;:&quot;Inactive&quot;},{&quot;code&quot;:&quot;suspended&quot;,&quot;display&quot;:&quot;Suspended&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3672
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:47 GMT
+server:nginx
+x-request-id:5-1775767
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system https://fhir.openmrs.org/location-status&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system https://fhir.openmrs.org/location-status&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l20"> </a>
+<p>#20</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;incomplete-ok&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;medication-request-intent-vs&quot;,&quot;text&quot;:{&quot;status&quot;:&quot;generated&quot;,&quot;div&quot;:&quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;proposal&lt;/td&gt;&lt;td&gt;Proposal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;plan&lt;/td&gt;&lt;td&gt;Plan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;order&lt;/td&gt;&lt;td&gt;Order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;original-order&lt;/td&gt;&lt;td&gt;Original Order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;reflex-order&lt;/td&gt;&lt;td&gt;Reflex Order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;filler-order&lt;/td&gt;&lt;td&gt;Filler Order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;instance-order&lt;/td&gt;&lt;td&gt;Instance Order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;option&lt;/td&gt;&lt;td&gt;Option&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;},&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/medication-request-intent-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;MedicationRequestIntentVs&quot;,&quot;title&quot;:&quot;Medication Request Intent Vs&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Medication Request Intent ValueSet&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;proposal&quot;,&quot;display&quot;:&quot;Proposal&quot;},{&quot;code&quot;:&quot;plan&quot;,&quot;display&quot;:&quot;Plan&quot;},{&quot;code&quot;:&quot;order&quot;,&quot;display&quot;:&quot;Order&quot;},{&quot;code&quot;:&quot;original-order&quot;,&quot;display&quot;:&quot;Original Order&quot;},{&quot;code&quot;:&quot;reflex-order&quot;,&quot;display&quot;:&quot;Reflex Order&quot;},{&quot;code&quot;:&quot;filler-order&quot;,&quot;display&quot;:&quot;Filler Order&quot;},{&quot;code&quot;:&quot;instance-order&quot;,&quot;display&quot;:&quot;Instance Order&quot;},{&quot;code&quot;:&quot;option&quot;,&quot;display&quot;:&quot;Option&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3720
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:48 GMT
+server:nginx
+x-request-id:5-1775769
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://fhir.openmrs.org/fhir/CodeSystem/medicationrequest-intent&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l21"> </a>
+<p>#21</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;incomplete-ok&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;medication-request-priority-vs&quot;,&quot;text&quot;:{&quot;status&quot;:&quot;generated&quot;,&quot;div&quot;:&quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;http://fhir.openmrs.org/fhir/request-priority&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;routine&lt;/td&gt;&lt;td&gt;Routine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;urgent&lt;/td&gt;&lt;td&gt;Urgent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;asap&lt;/td&gt;&lt;td&gt;ASAP&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;stat&lt;/td&gt;&lt;td&gt;STAT&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;},&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/medication-request-priority-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;MedicationRequestPriorityVs&quot;,&quot;title&quot;:&quot;Medication Request Priority ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Openmrs Medication Request Priority ValueSet&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://fhir.openmrs.org/fhir/request-priority&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;routine&quot;,&quot;display&quot;:&quot;Routine&quot;},{&quot;code&quot;:&quot;urgent&quot;,&quot;display&quot;:&quot;Urgent&quot;},{&quot;code&quot;:&quot;asap&quot;,&quot;display&quot;:&quot;ASAP&quot;},{&quot;code&quot;:&quot;stat&quot;,&quot;display&quot;:&quot;STAT&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3682
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:48 GMT
+server:nginx
+x-request-id:5-1775772
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://fhir.openmrs.org/fhir/request-priority&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://fhir.openmrs.org/fhir/request-priority&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l22"> </a>
+<p>#22</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;incomplete-ok&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;OpenMRS-task-intent-vs&quot;,&quot;text&quot;:{&quot;status&quot;:&quot;generated&quot;,&quot;div&quot;:&quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;http://hl7.org/fhir/ValueSet/task-intent&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;task-intent-order&lt;/td&gt;&lt;td&gt;Order&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;},&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/OpenMRS-task-intent-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;OMRSPatientTaskIntentVS&quot;,&quot;title&quot;:&quot;OpenMRS Intent for Task&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;The intent of the task, subset from https://www.hl7.org/FHIR/valueset-task-intent.html&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/ValueSet/task-intent&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;task-intent-order&quot;,&quot;display&quot;:&quot;Order&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3672
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:49 GMT
+server:nginx
+x-request-id:5-1775774
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-intent&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-intent&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l23"> </a>
+<p>#23</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;incomplete-ok&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;OpenMRS-task-status-vs&quot;,&quot;text&quot;:{&quot;status&quot;:&quot;generated&quot;,&quot;div&quot;:&quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;http://hl7.org/fhir/ValueSet/task-status&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;task-status-requested&lt;/td&gt;&lt;td&gt;Requested&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;task-status-rejected&lt;/td&gt;&lt;td&gt;Rejected&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;task-status-accepted&lt;/td&gt;&lt;td&gt;Accepted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;task-status-completed&lt;/td&gt;&lt;td&gt;Completed&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;},&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/OpenMRS-task-status-vs&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;OMRSPatientTaskStatusVS&quot;,&quot;title&quot;:&quot;OpenMRS Status for Task&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;The state of the task, subset from https://www.hl7.org/FHIR/valueset-task-status.html&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/ValueSet/task-status&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;task-status-requested&quot;,&quot;display&quot;:&quot;Requested&quot;},{&quot;code&quot;:&quot;task-status-rejected&quot;,&quot;display&quot;:&quot;Rejected&quot;},{&quot;code&quot;:&quot;task-status-accepted&quot;,&quot;display&quot;:&quot;Accepted&quot;},{&quot;code&quot;:&quot;task-status-completed&quot;,&quot;display&quot;:&quot;Completed&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3672
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:49 GMT
+server:nginx
+x-request-id:5-1775776
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-status&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system http://hl7.org/fhir/ValueSet/task-status&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+<hr/><a name="l24"> </a>
+<p>#24</p>
+<pre>
+POST http://tx.fhir.org/r4/ValueSet/$expand?_limit=1000&_incomplete=true HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;x-system-cache-id&quot;,&quot;valueString&quot;:&quot;dc8fd4bc-091a-424a-8a3b-6198ef146891&quot;},{&quot;name&quot;:&quot;includeDefinition&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;excludeNested&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;incomplete-ok&quot;,&quot;valueBoolean&quot;:true},{&quot;name&quot;:&quot;valueSet&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;ValueSet&quot;,&quot;id&quot;:&quot;valueset-immunization-status&quot;,&quot;text&quot;:{&quot;status&quot;:&quot;generated&quot;,&quot;div&quot;:&quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;https://fhir.openmrs.org/fhir/valueset-immunization-status&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;completed&lt;/td&gt;&lt;td&gt;completed&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;entered-in-error&lt;/td&gt;&lt;td&gt;entered-in-error&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;not-done&lt;/td&gt;&lt;td&gt;not-done&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;},&quot;url&quot;:&quot;http://fhir.openmrs.org/core/ValueSet/valueset-immunization-status&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;name&quot;:&quot;ImmunizationStatusVs&quot;,&quot;title&quot;:&quot;Immunization Status ValueSet&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2023-03-20T20:24:53+01:00&quot;,&quot;contact&quot;:[{&quot;name&quot;:&quot;OpenMRS, Inc.&quot;,&quot;telecom&quot;:[{&quot;system&quot;:&quot;url&quot;,&quot;value&quot;:&quot;https://openmrs.org&quot;}]}],&quot;description&quot;:&quot;Immunization Value Set&quot;,&quot;compose&quot;:{&quot;include&quot;:[{&quot;system&quot;:&quot;https://fhir.openmrs.org/fhir/valueset-immunization-status&quot;,&quot;concept&quot;:[{&quot;code&quot;:&quot;completed&quot;,&quot;display&quot;:&quot;completed&quot;},{&quot;code&quot;:&quot;entered-in-error&quot;,&quot;display&quot;:&quot;entered-in-error&quot;},{&quot;code&quot;:&quot;not-done&quot;,&quot;display&quot;:&quot;not-done&quot;}]}]}}},{&quot;name&quot;:&quot;_limit&quot;,&quot;valueString&quot;:&quot;1000&quot;},{&quot;name&quot;:&quot;_incomplete&quot;,&quot;valueString&quot;:&quot;true&quot;}]}
+</pre>
+<pre>
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:3708
+content-type:application/fhir+json
+date:Mon, 20 Mar 2023 19:25:50 GMT
+server:nginx
+x-request-id:5-1775779
+
+{&quot;resourceType&quot; : &quot;OperationOutcome&quot;,&quot;text&quot; : {&quot;status&quot; : &quot;generated&quot;,&quot;div&quot; : &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;Unable to provide support for code system https://fhir.openmrs.org/fhir/valueset-immunization-status&lt;/p&gt;&lt;/div&gt;&quot;},&quot;issue&quot; : [{&quot;severity&quot; : &quot;error&quot;,&quot;code&quot; : &quot;not-supported&quot;,&quot;details&quot; : {&quot;text&quot; : &quot;Unable to provide support for code system https://fhir.openmrs.org/fhir/valueset-immunization-status&quot;},&quot;diagnostics&quot; : &quot;(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(000000000033D7AC){FHIRServer.exe} [000000000073E7AC] Unknown function at TMethodImplementationIntercept + $2974AC\r\n(000000000033F46E){FHIRServer.exe} [000000000074046E] Unknown function at TMethodImplementationIntercept + $29916E\r\n(000000000004B6F7){FHIRServer.exe} [000000000044C6F7] Unknown function at __dbk_fcall_wrapper + $2E2F7\r\n(000000000004BFEB){FHIRServer.exe} [000000000044CFEB] Unknown function at __dbk_fcall_wrapper + $2EBEB\r\n(0000000000011276){FHIRServer.exe} [0000000000412276]\r\n(00000000000112B1){FHIRServer.exe} [00000000004122B1]\r\n(0000000000ECECED){FHIRServer.exe} [00000000012CFCED] Unknown function at TMethodImplementationIntercept + $E289ED\r\n(0000000000EDAEDE){FHIRServer.exe} [00000000012DBEDE] Unknown function at TMethodImplementationIntercept + $E34BDE\r\n(0000000000ED861B){FHIRServer.exe} [00000000012D961B] Unknown function at TMethodImplementationIntercept + $E3231B\r\n(0000000000ED72AF){FHIRServer.exe} [00000000012D82AF] Unknown function at TMethodImplementationIntercept + $E30FAF\r\n(000000000109CE14){FHIRServer.exe} [000000000149DE14] Unknown function at TMethodImplementationIntercept + $FF6B14\r\n(000000000109C5C4){FHIRServer.exe} [000000000149D5C4] Unknown function at TMethodImplementationIntercept + $FF62C4\r\n(00000000013DCA77){FHIRServer.exe} [00000000017DDA77] Unknown function at TMethodImplementationIntercept + $1336777\r\n(00000000011587F2){FHIRServer.exe} [00000000015597F2] Unknown function at TMethodImplementationIntercept + $10B24F2\r\n(0000000001150BC7){FHIRServer.exe} [0000000001551BC7] Unknown function at TMethodImplementationIntercept + $10AA8C7\r\n(00000000023509CA){FHIRServer.exe} [00000000027519CA] Unknown function at TMethodImplementationIntercept + $22AA6CA\r\n(000000000234D561){FHIRServer.exe} [000000000274E561] Unknown function at TMethodImplementationIntercept + $22A7261\r\n(0000000002348313){FHIRServer.exe} [0000000002749313] Unknown function at TMethodImplementationIntercept + $22A2013\r\n(0000000006CAD3CF){FHIRServer.exe} [00000000070AE3CF] Unknown function at TMethodImplementationIntercept + $6C070CF\r\n(000000000025CA0C){FHIRServer.exe} [000000000065DA0C] Unknown function at TMethodImplementationIntercept + $1B670C\r\n(000000000025E666){FHIRServer.exe} [000000000065F666] Unknown function at TMethodImplementationIntercept + $1B8366\r\n(000000000023789E){FHIRServer.exe} [000000000063889E] Unknown function at TMethodImplementationIntercept + $19159E\r\n(0000000000235961){FHIRServer.exe} [0000000000636961] Unknown function at TMethodImplementationIntercept + $18F661\r\n(000000000023CE94){FHIRServer.exe} [000000000063DE94] Unknown function at TMethodImplementationIntercept + $196B94\r\n(000000000023BDBD){FHIRServer.exe} [000000000063CDBD] Unknown function at TMethodImplementationIntercept + $195ABD\r\n(0000000000138173){FHIRServer.exe} [0000000000539173] Unknown function at TMethodImplementationIntercept + $91E73\r\n(0000000000011E3D){FHIRServer.exe} [0000000000412E3D]\r\n(0000000000000412){KERNEL32.DLL} [00007FFC586D1412] BaseThreadInitThunk + $22\r\n(0000000000014504){ntdll.dll   } [00007FFC5A115504] RtlUserThreadStart + $34\r\n&quot;}]}
+</pre>
+</head></html>

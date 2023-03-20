@@ -1,0 +1,122 @@
+FHIR IG Publisher Version 1.2.53 (Git# 33bc816161b6). Built 2023-03-19T20:02:54.223Z (23 hours old)
+Detected Java version: 17.0.5 from c:\Program Files\java\jdk-17 on amd64 (64bit). 8104MB available
+dir = C:\work\ImplementationGuides\ig-release\openMRS, path = C:\Python310\Scripts\;C:\Python310\;C:\Program Files\AdoptOpenJDK\jdk-8.0.242.08-hotspot\bin;C:\Program Files (x86)\Embarcadero\Studio\22.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl;C:\Program Files (x86)\Embarcadero\Studio\22.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Win64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git LFS;c:\Program Files\java\jdk-17\bin;C:\Program Files\dotnet\;C:\Ruby31-x64\bin;C:\Users\Jose\AppData\Local\Microsoft\WindowsApps;C:\Users\Jose\AppData\Local\GitHubDesktop\bin;C:\Users\Jose\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin;C:\Users\Jose\AppData\Local\Pandoc\
+Parameters: -go-publish -source openmrs -web C:\work\ImplementationGuides\ig-release\openMRS/webroot -temp C:\work\ImplementationGuides\ig-release\openMRS/temp -registry ../ig-registry/fhir-ig-list.json -history ../ig-history -templates C:\work\ImplementationGuides\ig-release\openMRS/webroot/templates
+---------------
+Publication Run: publish openmrs to C:\work\ImplementationGuides\ig-release\openMRS/webroot
+Run Number: 1
+Web Layout using the script openmrs.fhir.[code] & http://fhir.openmrs.org/[code]
+Relative directory for IG is '\core'
+All checks passed. Do the publication build from C:\work\ImplementationGuides\ig-release\openMRS\openmrs and publish to C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\core
+Prepare Build space in C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0
+Build IG at C:\work\ImplementationGuides\ig-release\openMRS\openmrs: final copy suitable for publication (in C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0)
+FHIR IG Publisher Version 1.2.53 (Git# 33bc816161b6). Built 2023-03-19T20:02:54.223Z (23 hours old)
+Detected Java version: 17.0.5 from c:\Program Files\java\jdk-17 on Windows 11/amd64 (64bit). 8104MB available
+dir = C:\work\ImplementationGuides\ig-release\openMRS, path = C:\Python310\Scripts\;C:\Python310\;C:\Program Files\AdoptOpenJDK\jdk-8.0.242.08-hotspot\bin;C:\Program Files (x86)\Embarcadero\Studio\22.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl;C:\Program Files (x86)\Embarcadero\Studio\22.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Win64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git LFS;c:\Program Files\java\jdk-17\bin;C:\Program Files\dotnet\;C:\Ruby31-x64\bin;C:\Users\Jose\AppData\Local\Microsoft\WindowsApps;C:\Users\Jose\AppData\Local\GitHubDesktop\bin;C:\Users\Jose\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin;C:\Users\Jose\AppData\Local\Pandoc\
+Parameters: -ig C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0 -resetTx -publish http://fhir.openmrs.org/core/1.0.0 -no-exit
+Start Clock @ Monday, 20 March 2023 at 20:27:28 Central European Standard Time (2023-03-20T20:27:28+01:00)
+
+Build FHIR IG from C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0 (00:00.012)
+Build Formal Publication package, intended for http://fhir.openmrs.org/core/1.0.0 (00:00.014)
+API keys loaded from C:\Users\Jose\fhir-api-keys.ini                             (00:00.016)
+Package Cache: C:\Users\Jose\.fhir\packages                                      (00:00.021)
+Run Sushi on C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0 (00:00.024)
+Sushi: info  Running SUSHI v2.7.1 (implements FHIR Shorthand specification v2.0.0) (00:00.709)
+Sushi: info  Arguments:                                                          (00:00.710)
+Sushi: info    --require-latest                                                  (00:00.711)
+Sushi: info    --out C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0 (00:00.712)
+Sushi: info    C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0 (00:00.713)
+Sushi: npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead. (00:02.393)
+Sushi: (node:23060) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency (00:02.394)
+Sushi: (Use `node --trace-warnings ...` to show where the warning was created)   (00:02.395)
+Sushi: (Use `node --trace-warnings ...` to show where the warning was created)
+error Current SUSHI version (2.7.1) is not the latest version. Upgrade to the latest version (2.9.0) or run SUSHI again without the --require-latest flag. (00:02.395)
+Sushi: (node:23060) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency (00:02.396)
+Sushi couldn't be run. Complete output from running Sushi :                      (00:02.408)
+Note: Check that Sushi is installed correctly ("npm install -g fsh-sushi". On windows, get npm from https://www.npmjs.com/get-npm) (00:02.409)
+Exception: Process exited with an error: 1 (Exit value: 1)                       (00:02.411)
+Publishing Content Failed: Process exited with an error: 1 (Exit value: 1)       (00:02.412)
+                                                                                 (00:02.413)
+Use -? to get command line help                                                  (00:02.414)
+                                                                                 (00:02.415)
+Stack Dump (for debugging):                                                      (00:02.416)
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1)
+	at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:166)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:153)
+	at org.hl7.fhir.igtools.publisher.Publisher.runFsh(Publisher.java:2362)
+	at org.hl7.fhir.igtools.publisher.Publisher.initialize(Publisher.java:2240)
+	at org.hl7.fhir.igtools.publisher.Publisher.execute(Publisher.java:900)
+	at org.hl7.fhir.igtools.publisher.Publisher.main(Publisher.java:10990)
+	at org.hl7.fhir.igtools.web.PublicationProcess.runBuild(PublicationProcess.java:748)
+	at org.hl7.fhir.igtools.web.PublicationProcess.doPublish(PublicationProcess.java:394)
+	at org.hl7.fhir.igtools.web.PublicationProcess.publishInner(PublicationProcess.java:311)
+	at org.hl7.fhir.igtools.web.PublicationProcess.publish(PublicationProcess.java:112)
+	at org.hl7.fhir.igtools.publisher.Publisher.main(Publisher.java:10749)
+Prepare Build space in C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0-milestone
+Build IG at C:\work\ImplementationGuides\ig-release\openMRS\openmrs: final copy suitable for publication (in C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0-milestone) (milestone build)
+FHIR IG Publisher Version 1.2.53 (Git# 33bc816161b6). Built 2023-03-19T20:02:54.223Z (23 hours old)
+Detected Java version: 17.0.5 from c:\Program Files\java\jdk-17 on Windows 11/amd64 (64bit). 8104MB available
+dir = C:\work\ImplementationGuides\ig-release\openMRS, path = C:\Python310\Scripts\;C:\Python310\;C:\Program Files\AdoptOpenJDK\jdk-8.0.242.08-hotspot\bin;C:\Program Files (x86)\Embarcadero\Studio\22.0\bin;C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl;C:\Program Files (x86)\Embarcadero\Studio\22.0\bin64;C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Win64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\VSCodium\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git LFS;c:\Program Files\java\jdk-17\bin;C:\Program Files\dotnet\;C:\Ruby31-x64\bin;C:\Users\Jose\AppData\Local\Microsoft\WindowsApps;C:\Users\Jose\AppData\Local\GitHubDesktop\bin;C:\Users\Jose\AppData\Roaming\npm;C:\Program Files\Java\jdk-17\bin;C:\Users\Jose\AppData\Local\Pandoc\
+Parameters: -ig C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0-milestone -publish http://fhir.openmrs.org/core/1.0.0 -milestone -no-exit
+Start Clock @ Monday, 20 March 2023 at 20:28:21 Central European Standard Time (2023-03-20T20:28:21+01:00)
+
+Build FHIR IG from C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0-milestone (00:00.002)
+Build Formal Publication package, intended for http://fhir.openmrs.org/core/1.0.0 (00:00.003)
+API keys loaded from C:\Users\Jose\fhir-api-keys.ini                             (00:00.005)
+Package Cache: C:\Users\Jose\.fhir\packages                                      (00:00.006)
+Run Sushi on C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0-milestone (00:00.008)
+Sushi: info  Running SUSHI v2.7.1 (implements FHIR Shorthand specification v2.0.0) (00:00.846)
+Sushi: info  Arguments:                                                          (00:00.847)
+Sushi: info    --require-latest                                                  (00:00.848)
+Sushi: info    --out C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0-milestone (00:00.849)
+Sushi: info    C:\work\ImplementationGuides\ig-release\openMRS\temp\openmrs.fhir.core#1.0.0-milestone (00:00.850)
+Sushi: npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead. (00:02.257)
+Sushi: (node:3156) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency (00:02.259)
+Sushi: (Use `node --trace-warnings ...` to show where the warning was created)   (00:02.261)
+Sushi: (Use `node --trace-warnings ...` to show where the warning was created)
+error Current SUSHI version (2.7.1) is not the latest version. Upgrade to the latest version (2.9.0) or run SUSHI again without the --require-latest flag. (00:02.261)
+Sushi: (node:3156) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency (00:02.262)
+Sushi couldn't be run. Complete output from running Sushi :                      (00:02.281)
+Note: Check that Sushi is installed correctly ("npm install -g fsh-sushi". On windows, get npm from https://www.npmjs.com/get-npm) (00:02.283)
+Exception: Process exited with an error: 1 (Exit value: 1)                       (00:02.286)
+Publishing Content Failed: Process exited with an error: 1 (Exit value: 1)       (00:02.288)
+                                                                                 (00:02.292)
+Use -? to get command line help                                                  (00:02.293)
+                                                                                 (00:02.295)
+Stack Dump (for debugging):                                                      (00:02.296)
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1)
+	at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:166)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:153)
+	at org.hl7.fhir.igtools.publisher.Publisher.runFsh(Publisher.java:2362)
+	at org.hl7.fhir.igtools.publisher.Publisher.initialize(Publisher.java:2240)
+	at org.hl7.fhir.igtools.publisher.Publisher.execute(Publisher.java:900)
+	at org.hl7.fhir.igtools.publisher.Publisher.main(Publisher.java:10990)
+	at org.hl7.fhir.igtools.web.PublicationProcess.runBuild(PublicationProcess.java:748)
+	at org.hl7.fhir.igtools.web.PublicationProcess.doPublish(PublicationProcess.java:399)
+	at org.hl7.fhir.igtools.web.PublicationProcess.publishInner(PublicationProcess.java:311)
+	at org.hl7.fhir.igtools.web.PublicationProcess.publish(PublicationProcess.java:112)
+	at org.hl7.fhir.igtools.publisher.Publisher.main(Publisher.java:10749)
+Keep a copy of the build directory at C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\ig-build-zips\openmrs.fhir.core#1.0.0.zip
+
+ok. All checks passed. Publish v1.0.0 to C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\core\1.0.0
+Copy the IG to C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\core\1.0.0
+Update C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\core\package-list.json
+Publish Box Statement: This page is part of the OpenMRS (v0.1.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="http://fhir.openmrs.org/core/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a>
+  .. 1339 files checked, 1339 updated
+  .. 435 clones checked, 870 updated
+  .. 216 redirections (216 created/updated)
+This is a milestone release - publish v1.0.0 to C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\core
+Publish Box Statement: This page is part of the OpenMRS (v0.1.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a href="http://fhir.openmrs.org/core/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a>
+  .. 1339 files checked, 1339 updated
+  .. 435 clones checked, 870 updated
+  .. 216 redirections (216 created/updated)
+Check for Files to delete
+  ... 0 files
+Copy to new IG to C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\core
+Update history page at C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320\core from C:\work\ImplementationGuides\ig-release\openMRS\..\ig-history and C:\work\ImplementationGuides\ig-release\openMRS/webroot/templates
+Build is complete. Copy from C:\work\ImplementationGuides\ig-release\openMRS\temp\web-root\run-20230320
+Go!
+openmrs.fhir.core (http://fhir.openmrs.org/core): OpenMRS @ https://openmrs.github.io/openmrs-contrib-fhir2-ig
+  release: Releases 0.1.0/4.0.1 @ http://fhir.openmrs.org/core/1.0.0

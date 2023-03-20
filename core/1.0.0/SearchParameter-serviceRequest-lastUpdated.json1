@@ -1,0 +1,25 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "serviceRequest-lastUpdated",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>serviceRequestLastUpdatedSearchParameter</h2><p>Parameter <code>_lastUpdated</code>:<code>date</code></p><div><p>Searches for serviceRequest based on service lastUpdated field eg) /openmrs/ws/fhir2/{release}/ServiceRequest?_lastUpdated={date}</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Target Resources</td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>"
+  },
+  "url" : "http://fhir.openmrs.org/core/SearchParameter/serviceRequest-lastUpdated",
+  "version" : "1.0.0",
+  "name" : "serviceRequestLastUpdatedSearchParameter",
+  "status" : "active",
+  "date" : "2023-03-20T20:24:53+01:00",
+  "contact" : [{
+    "name" : "OpenMRS, Inc.",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://openmrs.org"
+    }]
+  }],
+  "description" : "Searches for serviceRequest based on service lastUpdated field eg) /openmrs/ws/fhir2/{release}/ServiceRequest?_lastUpdated={date}",
+  "code" : "_lastUpdated",
+  "base" : ["ServiceRequest"],
+  "type" : "date",
+  "target" : ["ServiceRequest"]
+}

@@ -1,0 +1,25 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "Practitioner-address-city",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PractitionerCitySearchParameter</h2><p>Parameter <code>address-city</code>:<code>string</code></p><div><p>Searches based on the address-city field for the Practitioner record eg) /ws/fhir2/{release}/Practitioner?address-city={city}</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html\">Practitioner</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Target Resources</td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html\">Practitioner</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>"
+  },
+  "url" : "http://fhir.openmrs.org/core/SearchParameter/Practitioner-address-city",
+  "version" : "1.0.0",
+  "name" : "PractitionerCitySearchParameter",
+  "status" : "active",
+  "date" : "2023-03-20T20:24:53+01:00",
+  "contact" : [{
+    "name" : "OpenMRS, Inc.",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://openmrs.org"
+    }]
+  }],
+  "description" : "Searches based on the address-city field for the Practitioner record eg) /ws/fhir2/{release}/Practitioner?address-city={city}",
+  "code" : "address-city",
+  "base" : ["Practitioner"],
+  "type" : "string",
+  "target" : ["Practitioner"]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="patient-address-city"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>patientCitySearchParameter</h2><p>Parameter <code>address-city</code>:<code>string</code></p><div><p>Searches based on the patient's recorded city/village of address eg) /ws/fhir2/{release}/Patient?address-city={city}</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Target Resources</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>
+  </text>
+  <url value="http://fhir.openmrs.org/core/SearchParameter/patient-address-city"/>
+  <version value="1.0.0"/>
+  <name value="patientCitySearchParameter"/>
+  <status value="active"/>
+  <date value="2023-03-20T20:24:53+01:00"/>
+  <contact>
+    <name value="OpenMRS, Inc."/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://openmrs.org"/>
+    </telecom>
+  </contact>
+  <description value="Searches based on the patient's recorded city/village of address eg) /ws/fhir2/{release}/Patient?address-city={city}"/>
+  <code value="address-city"/>
+  <base value="Patient"/>
+  <type value="string"/>
+  <target value="Patient"/>
+</SearchParameter>

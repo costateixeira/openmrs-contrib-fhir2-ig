@@ -1,0 +1,25 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "group-Search-entity-paramenter",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GroupManagingEnityReference</h2><p>Parameter <code>reference</code>:<code>reference</code></p><div><p>Search for a group  basing on managing entity Reference(Practitioner)</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/group.html\">Group</a></td></tr><tr><td>Expression</td><td><code>Group.member.entity</code></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>"
+  },
+  "url" : "http://fhir.openmrs.org/core/SearchParameter/group-Search-entity-paramenter",
+  "version" : "1.0.0",
+  "name" : "GroupManagingEnityReference",
+  "status" : "active",
+  "date" : "2023-03-20T20:24:53+01:00",
+  "contact" : [{
+    "name" : "OpenMRS, Inc.",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://openmrs.org"
+    }]
+  }],
+  "description" : "Search for a group  basing on managing entity Reference(Practitioner)",
+  "code" : "reference",
+  "base" : ["Group"],
+  "type" : "reference",
+  "expression" : "Group.member.entity"
+}

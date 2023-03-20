@@ -1,0 +1,12 @@
+{
+  "url" : "http://fhir.openmrs.org/core/ImplementationGuide/openmrs.fhir.core",
+  "name" : "OMRSFhir2ImplementationGuide",
+  "package-id" : "openmrs.fhir.core",
+  "ig-ver" : "1.0.0",
+  "date" : "Mon, 20 Mar, 2023 20:24:53 +0100",
+  "errs" : 43,
+  "warnings" : 147,
+  "hints" : 10,
+  "version" : "4.0.1",
+  "tool" : "5.0.0-draft-final (3)"
+}

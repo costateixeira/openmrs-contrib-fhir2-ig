@@ -1,0 +1,25 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "Encounter-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>EncounterTypeSearchParameter</h2><p>Parameter <code>encounter.type</code>:<code>token</code></p><div><p>Searches for Encounter based on encounter type field eg) /ws/fhir2/{release}/Encounter?type={encounterType}</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/encounter.html\">Encounter</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Target Resources</td><td><a href=\"http://hl7.org/fhir/R4/encounter.html\">Encounter</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>"
+  },
+  "url" : "http://fhir.openmrs.org/core/SearchParameter/Encounter-type",
+  "version" : "1.0.0",
+  "name" : "EncounterTypeSearchParameter",
+  "status" : "active",
+  "date" : "2023-03-20T20:24:53+01:00",
+  "contact" : [{
+    "name" : "OpenMRS, Inc.",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://openmrs.org"
+    }]
+  }],
+  "description" : "Searches for Encounter based on encounter type field eg) /ws/fhir2/{release}/Encounter?type={encounterType}",
+  "code" : "encounter.type",
+  "base" : ["Encounter"],
+  "type" : "token",
+  "target" : ["Encounter"]
+}

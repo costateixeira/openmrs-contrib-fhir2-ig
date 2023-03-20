@@ -1,0 +1,25 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "person-address-state",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>personStateSearchParameter</h2><p>Parameter <code>address-state</code>:<code>string</code></p><div><p>Searches based on the person's recorded state/province of address eg) /ws/fhir2/{release}/Person?address-state={state}</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/person.html\">Person</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Target Resources</td><td><a href=\"http://hl7.org/fhir/R4/person.html\">Person</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>"
+  },
+  "url" : "http://fhir.openmrs.org/core/SearchParameter/person-address-state",
+  "version" : "1.0.0",
+  "name" : "personStateSearchParameter",
+  "status" : "active",
+  "date" : "2023-03-20T20:24:53+01:00",
+  "contact" : [{
+    "name" : "OpenMRS, Inc.",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://openmrs.org"
+    }]
+  }],
+  "description" : "Searches based on the person's recorded state/province of address eg) /ws/fhir2/{release}/Person?address-state={state}",
+  "code" : "address-state",
+  "base" : ["Person"],
+  "type" : "string",
+  "target" : ["Person"]
+}

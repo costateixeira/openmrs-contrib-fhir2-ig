@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="location-partof"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>LocationPartOfSearchParameter</h2><p>Parameter <code>partOf</code>:<code>reference</code></p><div><p>Searches based on the partof field for the location record eg) /ws/fhir2/{release}/Location?partof={reference}</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/location.html">Location</a></td></tr><tr><td>Expression</td><td>(none)</td></tr><tr><td>Target Resources</td><td><a href="http://hl7.org/fhir/R4/location.html">Location</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>
+  </text>
+  <url value="http://fhir.openmrs.org/core/SearchParameter/location-partof"/>
+  <version value="1.0.0"/>
+  <name value="LocationPartOfSearchParameter"/>
+  <status value="active"/>
+  <date value="2023-03-20T20:24:53+01:00"/>
+  <contact>
+    <name value="OpenMRS, Inc."/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://openmrs.org"/>
+    </telecom>
+  </contact>
+  <description value="Searches based on the partof field for the location record eg) /ws/fhir2/{release}/Location?partof={reference}"/>
+  <code value="partOf"/>
+  <base value="Location"/>
+  <type value="reference"/>
+  <target value="Location"/>
+</SearchParameter>
